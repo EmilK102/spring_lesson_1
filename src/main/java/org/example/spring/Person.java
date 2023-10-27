@@ -1,5 +1,9 @@
 package org.example.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("myPerson")
 public class Person {
     private Pet pet;
     private String surname;
@@ -24,6 +28,7 @@ public class Person {
         this.age = age;
     }
 
+    @Autowired
     public void setPet(Pet pet) {
         this.pet = pet;
     }

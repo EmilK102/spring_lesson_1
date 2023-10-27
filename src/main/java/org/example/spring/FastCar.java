@@ -13,6 +13,10 @@ public class FastCar implements Car{
         person.callYourPet();
     }
 
+    public void getPersonInfo(){
+        System.out.println(person.getAge() + " " + person.getSurname());
+    }
+
     @Override
     public void goCar() {
         System.out.println("I am faster car");

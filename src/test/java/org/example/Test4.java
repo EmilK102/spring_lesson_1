@@ -8,6 +8,7 @@ public class Test4 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext4.xml");
         FastCar fastCar = context.getBean("fastCar", FastCar.class);
         fastCar.goCar();
+        fastCar.getPersonInfo();
         context.close();
     }
 }

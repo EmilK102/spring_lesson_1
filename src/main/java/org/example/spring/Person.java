@@ -1,12 +1,16 @@
 package org.example.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("myPerson")
 public class Person {
     private Pet pet;
+    @Value("${persom.surname}")
     private String surname;
+    @Value("${persom.age}")
     private  int age;
 
     public String getSurname() {
@@ -29,6 +33,7 @@ public class Person {
     }
 
     @Autowired
+    @Qualifier("myDog")
     public void setPet(Pet pet) {
         this.pet = pet;
     }
